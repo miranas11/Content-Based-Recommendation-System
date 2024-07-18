@@ -1,17 +1,18 @@
 {
-  "name": "recommendation_system",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "cookie-parser": "^1.4.6",
-    "express": "^4.19.2",
-    "nodemon": "^3.1.4"
-  }
+    "name": "recommendation_system121",
+    "version": "1.0.1",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "recommendation"
+    ],
+    "author": "Mir Anas",
+    "license": "ISC",
+    "dependencies": {
+        "cookie-parser": "^1.4.6",
+        "express": "^4.19.2"
+    }
 }
