@@ -6,7 +6,9 @@ A generic content-based filtering recommendation system that can be used for var
 
 To install the package, run:
 
+```bash
 npm install recommendation-system121
+```
 
 ## Usage
 
@@ -14,9 +16,15 @@ Here's how you can use this recommendation system in an Express application.
 
 ### Basic Setup
 
-const express = require('express');
-const cookieParser = require('cookie-parser');
-const { createUser, addTag, addItemToTag, getRecommendedTags } = require('my-recommendation-system');
+```javascript
+const express = require("express");
+const cookieParser = require("cookie-parser");
+const {
+    createUser,
+    addTag,
+    addItemToTag,
+    getRecommendedTags,
+} = require("my-recommendation-system");
 
 const app = express();
 const port = 3000;
@@ -24,30 +32,31 @@ const port = 3000;
 app.use(cookieParser());
 app.use(express.json());
 
-app.post('/create-user', (req, res) => {
-const { userId } = req.body;
-createUser(req, res, userId);
+app.post("/create-user", (req, res) => {
+    const { userId } = req.body;
+    createUser(req, res, userId);
 });
 
-app.post('/add-tag', (req, res) => {
-const { userId, tagName } = req.body;
-addTag(req, res, userId, tagName);
+app.post("/add-tag", (req, res) => {
+    const { userId, tagName } = req.body;
+    addTag(req, res, userId, tagName);
 });
 
-app.post('/add-items', (req, res) => {
-const { userId, tagName, newItems } = req.body;
-addItemToTag(req, res, userId, tagName, newItems);
+app.post("/add-items", (req, res) => {
+    const { userId, tagName, newItems } = req.body;
+    addItemToTag(req, res, userId, tagName, newItems);
 });
 
-app.get('/recommendations', (req, res) => {
-const { userId, tagName } = req.query;
-const recommendations = getRecommendedTags(req, res, userId, tagName);
-res.json(recommendations);
+app.get("/recommendations", (req, res) => {
+    const { userId, tagName } = req.query;
+    const recommendations = getRecommendedTags(req, res, userId, tagName);
+    res.json(recommendations);
 });
 
 app.listen(port, () => {
-console.log(`Server running at http://localhost:${port}`);
+    console.log(`Server running at http://localhost:${port}`);
 });
+```
 
 ## API
 
