@@ -1,4 +1,4 @@
-# My Recommendation System
+# Recommendation System
 
 A generic content-based filtering recommendation system that can be used for various types of content, including movies, news articles, gadgets, and shopping items.
 
